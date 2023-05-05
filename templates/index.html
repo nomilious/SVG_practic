@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab5</title>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static',filename='style.css' ) }}>
+    <script src={{ url_for("static", filename="d3.js" ) }}></script>
+</head>
+
+<body>
+    <svg id="canvas"></svg>
+    <script>
+        var elements = {{ elements| tojson }}
+        var nodes = {{ nodes| tojson }}
+    </script>
+    <script src={{ url_for("static", filename="script.js" ) }}></script>
+</body>
+
+</html>
